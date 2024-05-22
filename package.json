@@ -1,0 +1,21 @@
+{
+  "name": "technical-interview-2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@digitalroute/cz-conventional-changelog-for-jira": "8.0.1",
+    "commitizen": "4.3.0"
+  }
+}
