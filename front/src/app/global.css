@@ -1,0 +1,28 @@
+body {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.body-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: 'header header' 'nav main';
+}
+
+.header {
+  grid-area: header;
+  background-color: antiquewhite;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: aqua;
+}
+
+.main {
+  grid-area: main;
+  background-color: blueviolet;
+}
