@@ -1,14 +1,14 @@
 import { isLeft } from 'fp-ts/lib/Either'
-import { caractersSA } from '../domains/caracters/service-adapters/caracters.service-adapters'
+
+import { getCaractersLib } from '../domains/caracters/lib/caracters.lib'
 
 const Page = async () => {
-  const caractersRes = await caractersSA.swapi.getMany()
+  const caractersRes = await getCaractersLib()
 
   if (isLeft(caractersRes)) {
     // manage error
     return (<>Error</>)
   }
-
 
   return (
     <div>

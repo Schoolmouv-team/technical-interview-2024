@@ -1,8 +1,9 @@
-import { Either, isLeft, left, right } from "fp-ts/lib/Either";
+import { Either, isLeft, left, right } from 'fp-ts/lib/Either'
 
-import { Caracter } from "../../../lib/types/caracters.lib.types";
 import { getSwapiCaracters } from './_get-caracters.swapi.service'
-import { SwapiCaracter } from "../types/swapi.types";
+
+import { Caracter } from '../../../lib/types/caracters.lib.types'
+import { SwapiCaracter } from '../types/swapi.types'
 
 const _fromSwapiToLib = (input: SwapiCaracter): Either<Error, Caracter> => {
   try {
@@ -24,7 +25,7 @@ export const getCaracters = async (): Promise<Either<Error, Caracter[]>> => {
 
     const caractersRes = []
 
-    for(let i = 0; i < swapiCaractersRes.right.length; i++) {
+    for (let i = 0; i < swapiCaractersRes.right.length; i++) {
       const _formattedRes = _fromSwapiToLib(swapiCaractersRes.right[i])
       if (isLeft(_formattedRes)) throw _formattedRes.left
 

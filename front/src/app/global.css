@@ -1,15 +1,16 @@
 body {
-  padding: 0;
   margin: 0 auto;
+  padding: 0;
 }
 
 .body-grid {
-  width: 100%;
-  height: 100%;
   display: grid;
+  grid-template-areas: 'header header' 'nav main';
   grid-template-columns: 2fr 5fr;
   grid-template-rows: 50px 1fr;
-  grid-template-areas: 'header header' 'nav main';
+
+  width: 100%;
+  height: 100%;
 }
 
 .header {
